@@ -21,5 +21,18 @@ public class MyService implements IMyService {
 		// TODO Auto-generated method stub
 		return list;
 	}
+	
+	public Course getCourse(long id) {
+		// TODO Auto-generated method stub
+		
+		Course c = null;
+		for(Course i:list) {
+			if(i.getId() == id) {
+				c = i;
+				break;
+			}
+		}
+		return c;
+	}
 
 }
