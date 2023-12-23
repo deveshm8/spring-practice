@@ -8,4 +8,5 @@ import restaurant_order.restaurant_order.entity.Course;
 public interface IMyService {
 	public List<Course> getCources();
 	Course getCourse(long id);
+	public Course addCourse(Course course);
 }

@@ -34,5 +34,10 @@ public class MyService implements IMyService {
 		}
 		return c;
 	}
+	
+	public Course addCourse(Course course) {
+		list.add(course);
+		return course;
+	}
 
 }
