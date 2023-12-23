@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import restaurant_order.restaurant_order.entity.Course;
@@ -35,5 +36,11 @@ public class MyController {
     @PostMapping("/api/courses")
     public Course addCourse(@RequestBody Course course ) {
     	return this.IServiceObj.addCourse(course);
+    }
+    
+    @PutMapping("/api/courses/{id}")
+    public int updateCourse(@PathVariable String id, @RequestBody Course course) {
+    	
+    	return this.IServiceObj.updateCourse(Long.parseLong(id), course);
     }
 }

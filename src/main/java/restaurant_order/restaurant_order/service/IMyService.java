@@ -9,4 +9,5 @@ public interface IMyService {
 	public List<Course> getCources();
 	Course getCourse(long id);
 	public Course addCourse(Course course);
+	public int updateCourse(long id1, Course course);
 }
