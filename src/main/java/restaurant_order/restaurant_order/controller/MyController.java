@@ -43,4 +43,11 @@ public class MyController {
     	
     	return this.IServiceObj.updateCourse(Long.parseLong(id), course);
     }
+    
+    @DeleteMapping("/api/courses/{id}")
+    public int deleteCourse(@PathVariable String id){
+    	
+    	return this.IServiceObj.deleteCourse
+    	
+    }
 }
