@@ -10,4 +10,5 @@ public interface IMyService {
 	Course getCourse(long id);
 	public Course addCourse(Course course);
 	public int updateCourse(long id1, Course course);
+	public int delete(long id);
 }

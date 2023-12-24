@@ -52,6 +52,16 @@ public class MyService implements IMyService {
 		return -1;
 	}
 	
+	public int deleteCourse(long id) {
+		
+		for(Course c:list) {
+			if(c.getId() == id) {
+				list.remove(c);
+				return 1;
+			}
+		}
+		return -1;
+	}
 	
 
 }
