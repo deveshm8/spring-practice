@@ -34,5 +34,34 @@ public class MyService implements IMyService {
 		}
 		return c;
 	}
+	
+	public Course addCourse(Course course) {
+		list.add(course);
+		return course;
+	}
+	@Override
+	public int updateCourse(long id1, Course course) {
+		// TODO Auto-generated method stub
+		for(Course c:list) {
+			if(c.getId() == id1) {
+				c.setAuthor(course.getAuthor());
+				c.setName(course.getName());
+				return 1;
+			}
+		}
+		return -1;
+	}
+	
+	public int deleteCourse(long id) {
+		
+		for(Course c:list) {
+			if(c.getId() == id) {
+				list.remove(c);
+				return 1;
+			}
+		}
+		return -1;
+	}
+	
 
 }
